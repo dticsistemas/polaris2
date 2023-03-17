@@ -1,0 +1,278 @@
+/* Center align the text within the three columns below the carousel */
+.banners{
+  padding:5px;
+}
+.box_lateral{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.text-white {
+    color: #fff !important;
+}
+.bg-dark {
+    background-color: #343a40 !important;
+}
+.title_empresa{
+  font-style: italic;
+}
+.comentario{
+  font-style: italic;
+  font-size: 16px!important;
+}
+a {
+    color: #007bff;
+}
+.back-jumbotron {
+    background-color: #e9ecef;
+
+}
+.img_empresa{
+  display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 380px;
+
+}
+.img_mision_vision{
+  display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 340px;
+  }
+  .mision_vision{
+    font-size: 16px;
+    }
+.caja{
+  padding-top:8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.caja_banner{
+  padding-right:5px;
+  padding-left: 5px;
+    }
+.banners h4{
+  margin-top: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.banners p{
+  text-align: left;
+  font-size: 16px;
+}
+.carousel-back{
+  background-color: #5a5a5a;
+
+}
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    font-size: 1.2em;
+}
+
+.btn-secondary:focus {
+    box-shadow: 0 0 0 .2rem rgba(108,117,125,.5);
+}
+.btn:focus, .btn:hover {
+    text-decoration: none;
+}
+
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+
+.form-campo{
+  width: 200px;
+}
+.table_productos_listar{
+  padding-top: 5px;
+   display: block;
+   min-height: 250px;
+}
+.vcenter { display: inline-block; vertical-align: middle; float: none; }
+.starter-template {
+  padding: 0px 15px;
+  text-align: center;
+}
+.starter-background-admin{
+  background-image: url(../img/administracion.jpg);
+  width: 100%;
+  height: 100%;
+  display:block;
+}
+.starter-container {
+  padding: 20px;
+
+}
+.starter-logo {
+
+  width: 280px;
+  margin-top: -10px;
+
+}
+.navbartitle{
+  padding: 15px 0px 15px 0px;
+  text-align: center;
+}
+.navbartitleadmin{
+  padding: 5px 0px 5px 0px;
+  text-align: center;
+}
+.text-search{
+  min-width: 180px;
+}
+.div_footer{
+  width: 100%;
+  padding-top: 10px;
+  font-size: 18px;
+}
+.gi-3x{
+	font-size: 3em;
+}
+.nav_user{
+  min-width: 150px;
+}
+.imagenes_miniatura{
+  height: 80px;
+}
+.imgmini {
+width: 80px;
+height: 70px;
+float: left;
+margin-top: 15px;
+margin-bottom: 15px;
+margin-right: 5px;
+-webkit-transition: margin 0.5s ease-out;
+-moz-transition: margin 0.5s ease-out;
+-ms-transition: margin 0.5s ease-out;
+transition: margin 0.5s ease-out;
+}
+.imgmini img{
+  max-height: 60px;
+}
+.imgmini:hover {
+margin-top: 0px;
+box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.detalle_title{
+  margin-bottom: 2px;
+}
+.img_detalle_producto{
+  min-height: 200px;
+  min-width: 300px;
+}
+.marco_detalle_producto{
+  position: relative;
+}
+.ampliar{
+
+  position:absolute;
+  bottom:0px;
+  right:0px;
+  border:none;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)}
+    to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 100px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 60px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 80%;
+    }
+    .starter-logo {
+      width: 220px;
+      margin-top: -10px;
+    }
+    .close {
+    z-index: 1
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+}

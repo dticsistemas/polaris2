@@ -1,0 +1,118 @@
+.icon_imagen{
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+}
+.icon_imagen_list{
+  width: 70px;
+  height: 70px;
+  font-size: 70px;
+}
+.icon_title{
+  padding: 0;
+  margin: 0 0 0 45px;
+  color: #444444;
+  font-size: 15px;
+  position: relative;
+}
+.icon_desc{
+margin: 0 0 0 45px;
+font-size: 12px;
+color: #888888;
+}
+.direct-chat-new {
+    position: relative;
+    background: #f39c12 !important;
+    border: 1px solid #f39d12;
+    color: #fff !important;
+}
+.fix-margin-bottom{
+  margin-bottom: 0px !important;
+}
+.fix-margin-col{
+  margin-right: -15px;
+}
+.fix-margin-right{
+  margin-right: -15px;
+}
+.fix-margin-left{
+  margin-left: -15px;
+}
+.list-group-info{
+ margin-bottom: 0px;
+ padding-left: 0px;
+}
+.list-group-item_info{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.card {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+}
+.card-parent {
+   padding: 5px;
+}
+.card {
+    padding: 10px;
+    border: 1px solid #b8d0e4;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    color: #333;
+    /*background: #fff;*/
+    /*background-color: rgba(184, 215, 228, 0.25);*/
+    background-color: rgba(184, 185, 228, 0.25);
+      /*background-color: rgba(6, 6, 29, 0.15);*/
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.panel_doble{
+  margin-top: 12px;
+}
+.panel_doble_header {
+    color: #4c4d5a;
+    border-color: #dcdcdc;
+    background: #f6f6f6;
+
+
+}
+.author {
+    text-align: center;
+    text-transform: none;
+    margin-top: -70px;
+}
+.img_foto{
+  height: 100px;
+  width: auto;
+}
+.avatar{
+  width: 124px;
+height: 124px;
+border: 5px solid #fff;
+    border-top-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+position: relative;
+margin-bottom: 15px;
+border-radius: 50%;
+margin-right: 5px;
+}
+.avatar.border-gray {
+    border-color: #eee;
+}
+.card_title {
+margin: 0;
+color: #333;
+font-weight: 300;
+line-height: 24px;
+font-size: 22px;
+font-family: Roboto,Helvetica Neue,Arial,sans-serif;
+}
+.description{
+font-family: Roboto,Helvetica Neue,Arial,sans-serif;
+font-weight: 400;
+
+}
+.perfil{
+  min-height: 150px;
+}

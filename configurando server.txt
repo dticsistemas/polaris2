@@ -1,0 +1,4 @@
+PHP.INI
+max_execution de 30 sec a 60
+post_masx_size de 8MB  a 20MB
+upload_max_filesize de 2MB a 10M

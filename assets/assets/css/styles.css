@@ -1,0 +1,556 @@
+/* ==========================================================================
+
+// Base Stylesheet - http://getbase.org
+// Author: Matthew Hartman - http://www.matthewhartman.com.au/
+// Version: 3.4.2 - Last Updated: June 09, 2017
+
+========================================================================== */
+
+
+
+
+img {
+  border-style: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.fade-in, .banner-heading-1, .banner-heading-2, .banner-heading-3, .banner-content-inner {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn; }
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -30px, 0);
+            transform: translate3d(0, -30px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -30px, 0);
+            transform: translate3d(0, -30px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+.fade-in-down {
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown; }
+
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+.fade-in-down-big {
+  -webkit-animation-name: fadeInDownBig;
+          animation-name: fadeInDownBig; }
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-30px, 0, 0);
+            transform: translate3d(-30px, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-30px, 0, 0);
+            transform: translate3d(-30px, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+.fade-in-left, .logo {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft; }
+
+@-webkit-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+.fade-in-left-big {
+  -webkit-animation-name: fadeInLeftBig;
+          animation-name: fadeInLeftBig; }
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(30px, 0, 0);
+            transform: translate3d(30px, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(30px, 0, 0);
+            transform: translate3d(30px, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+.fade-in-right, .menu {
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight; }
+
+@-webkit-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+.fade-in-right-big {
+  -webkit-animation-name: fadeInRightBig;
+          animation-name: fadeInRightBig; }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30px, 0);
+            transform: translate3d(0, 30px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30px, 0);
+            transform: translate3d(0, 30px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+.fade-in-up, .button-primary, .button-secondary {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp; }
+
+@-webkit-keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+.fade-in-up-big {
+  -webkit-animation-name: fadeInUpBig;
+          animation-name: fadeInUpBig; }
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent;
+    color: #000;
+    box-shadow: none;
+    text-shadow: none; }
+  a, a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  a[href^="#"]:after, a[href^="javascript:"]:after {
+    content: ""; }
+  pre, blockquote {
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr {
+    page-break-inside: avoid; }
+  img {
+    page-break-inside: avoid;
+    max-width: 100%; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+  h2, h3 {
+    page-break-after: avoid; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; } }
+
+@-webkit-keyframes openCurtainDown {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; }
+  100% {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; } }
+
+@keyframes openCurtainDown {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; }
+  100% {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; } }
+
+@-webkit-keyframes openCurtainUp {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; }
+  100% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; } }
+
+@keyframes openCurtainUp {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; }
+  100% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; } }
+
+.open-curtain-up, .banner:after, .banner-inner:after {
+  -webkit-animation-name: openCurtainUp;
+          animation-name: openCurtainUp; }
+
+.open-curtain-down, .banner:before, .banner-inner:before {
+  -webkit-animation-name: openCurtainDown;
+          animation-name: openCurtainDown; }
+
+.button {
+  padding: 16px 48px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  background: #db3333;
+  border-color: transparent;
+  color: #fff; }
+
+.button-secondary {
+  background: #ccc;
+  color: #111; }
+
+
+.image-banner {
+  background: #01259f;
+  min-height: 100px; }
+
+.logo {
+  width: 350px;
+  height: 60px;
+  display: block;
+  background: url('../img/logo.png') no-repeat;
+  transition: all .2s;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+  @media only screen and (min-width: 740px) {
+    .logo {
+      float: left; } }
+  .logo:hover {
+    opacity: .8; }
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0 0 0;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+  @media only screen and (min-width: 740px) {
+    .menu {
+      padding: 26px 0 0 0;
+      float: right; } }
+  .menu > li {
+    display: inline-block;
+    margin: 0 20px 0 0; }
+    .menu > li > a {
+      color: #ccc;
+      text-decoration: none;
+      transition: all .2s; }
+      .menu > li > a:hover {
+        color: #fff; }
+
+.banner:before,
+.banner:after,
+.banner-inner:before,
+.banner-inner:after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #111;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.banner:before {
+  left: 0;
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s; }
+
+.banner:after {
+  left: 25%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+
+.banner-inner:before {
+  left: 50%;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s; }
+
+.banner-inner:after {
+  left: 75%;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s; }
+
+.banner-wrap {
+  overflow: hidden;
+  background: url(../img/apple-tree.jpg) 0 0 no-repeat #111;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  margin-bottom: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .banner-wrap:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #01259f;
+    background: rgba(1, 37, 159, 0.2);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4; }
+  @media only screen and (min-width: 740px) {
+    .banner-wrap {
+      padding-top: 100px;
+      padding-bottom: 100px; } }
+  @media only screen and (min-width: 980px) {
+    .banner-wrap {
+      padding-top: 140px;
+      padding-bottom: 140px; } }
+  @media only screen and (min-width: 1140px) {
+    .banner-wrap {
+      padding-top: 180px;
+      padding-bottom: 180px; } }
+
+.banner-content {
+  text-align: center;
+  position: relative;
+  z-index: 100; }
+
+.banner-heading {
+  font-size: 60px;
+  font-size: 3.75rem;
+  line-height: 72px;
+  line-height: 4.5rem;
+  word-break: break-all;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 20px; }
+  @media only screen and (min-width: 740px) {
+    .banner-heading {
+      font-size: 80px;
+      font-size: 5rem;
+      line-height: 100px;
+      line-height: 6.25rem; } }
+  @media only screen and (min-width: 980px) {
+    .banner-heading {
+      font-size: 100px;
+      font-size: 6.25rem;
+      line-height: 120px;
+      line-height: 7.5rem; } }
+
+.banner-heading-1 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.banner-heading-2 {
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.banner-heading-3 {
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.banner-content-inner {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 28px;
+  line-height: 1.75rem;
+  padding: 0 20px 20px 20px;
+  margin: 0 auto;
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+  @media only screen and (min-width: 740px) {
+    .banner-content-inner {
+      width: 520px; } }
+  @media only screen and (min-width: 980px) {
+    .banner-content-inner {
+      font-size: 26px;
+      font-size: 1.625rem;
+      line-height: 32px;
+      line-height: 2rem;
+      width: 600px; } }
+
+.banner-button {
+  display: block;
+  margin: 5px 0; }
+  @media only screen and (min-width: 740px) {
+    .banner-button {
+      display: inline-block;
+      margin: 0 2px; } }
+
+.button-primary {
+  -webkit-animation-delay: 3.9s;
+          animation-delay: 3.9s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.button-secondary {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.about-image-banner {
+  background: url(../img/romania.jpg) 0 0 no-repeat;
+  background-size: cover; }
+  @media only screen and (min-width: 740px) {
+    .about-image-banner {
+      min-height: 1400px; } }
+  @media only screen and (min-width: 980px) {
+    .about-image-banner {
+      min-height: 1200px; } }
+  @media only screen and (min-width: 1140px) {
+    .about-image-banner {
+      min-height: 1000px; } }
+
