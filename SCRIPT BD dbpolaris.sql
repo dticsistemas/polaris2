@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-03-2023 a las 00:29:59
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 7.4.29
+-- Tiempo de generación: 17-03-2023 a las 01:39:22
+-- Versión del servidor: 10.1.38-MariaDB
+-- Versión de PHP: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -93,8 +94,8 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `titulo`, `subtitulo`, `imagen`, `descripcion`) VALUES
-(1, 'Publicite AQUI, Tus datos', 'Pulicita y promocionate', 'a3475-registrooferta.jpg', '<p>\r\n	Emplearemos los datos indicados con anterioridad para el env&iacute;o de nuestras newsletters, SMS y para nuestras campa&ntilde;as de redes sociales, podr&aacute;s anular tu suscripci&oacute;n en cualquier momento.</p>\r\n'),
-(2, 'Polaris APK , PUBLICIDAD ESPECIAL', 'Unete', 'a40fd-siguiente.jpg', '<p>\r\n	Las tiendas Polaris APK somos l&iacute;deres en inform&aacute;tica, electr&oacute;nica, electrodom&eacute;sticos y otros complementos para el entretenimiento, siempre con las mejores marcas al mejor precio.</p>\r\n');
+(1, 'Publicite AQUI, Tus datos', 'Pulicita y promocionate', '8b1b4-admin_inventarios.png', '<p>\r\n	Emplearemos los datos indicados con anterioridad para el env&iacute;o de nuestras newsletters, SMS y para nuestras campa&ntilde;as de redes sociales, podr&aacute;s anular tu suscripci&oacute;n en cualquier momento.</p>\r\n'),
+(2, 'Polaris APK , PUBLICIDAD ESPECIAL', 'Unete', '1edbf-admin_estilo.png', '<p>\r\n	Las tiendas Polaris APK somos l&iacute;deres en inform&aacute;tica, electr&oacute;nica, electrodom&eacute;sticos y otros complementos para el entretenimiento, siempre con las mejores marcas al mejor precio.</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -105,11 +106,24 @@ INSERT INTO `banners` (`id`, `titulo`, `subtitulo`, `imagen`, `descripcion`) VAL
 CREATE TABLE `bitacora` (
   `id` int(11) NOT NULL,
   `id_accion` int(11) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp(),
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ip` varchar(20) NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `data` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `bitacora`
+--
+
+INSERT INTO `bitacora` (`id`, `id_accion`, `fecha`, `ip`, `id_usuario`, `data`) VALUES
+(24, 1, '2023-03-16 23:51:13', '127.0.0.1', 6, ''),
+(25, 15, '2023-03-17 00:18:56', '127.0.0.1', 6, '16'),
+(26, 15, '2023-03-17 00:18:58', '127.0.0.1', 6, '18'),
+(27, 15, '2023-03-17 00:19:02', '127.0.0.1', 6, '14'),
+(28, 15, '2023-03-17 00:19:07', '127.0.0.1', 6, '17'),
+(29, 15, '2023-03-17 00:19:10', '127.0.0.1', 6, '15'),
+(30, 5, '2023-03-17 00:28:24', '127.0.0.1', 6, '20');
 
 -- --------------------------------------------------------
 
@@ -123,6 +137,41 @@ CREATE TABLE `captcha` (
   `ip_address` varchar(16) NOT NULL DEFAULT '0',
   `word` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `captcha`
+--
+
+INSERT INTO `captcha` (`captcha_id`, `captcha_time`, `ip_address`, `word`) VALUES
+(357, 1679010328, '127.0.0.1', 'CAq7p'),
+(358, 1679010336, '127.0.0.1', 'nLUqt'),
+(359, 1679010337, '127.0.0.1', 'tzL9Y'),
+(360, 1679010422, '127.0.0.1', 'yoXBk'),
+(361, 1679010423, '127.0.0.1', 'xUjJK'),
+(362, 1679010458, '127.0.0.1', 'Sbi4G'),
+(363, 1679010478, '127.0.0.1', 'rlDnA'),
+(364, 1679010530, '127.0.0.1', 'ds6O9'),
+(365, 1679010531, '127.0.0.1', 'ztryG'),
+(366, 1679010531, '127.0.0.1', '1JR6J'),
+(367, 1679010624, '127.0.0.1', 'mOVt7'),
+(368, 1679010628, '127.0.0.1', '0omOM'),
+(369, 1679010628, '127.0.0.1', 'yeEg1'),
+(370, 1679010628, '127.0.0.1', 'ovjBf'),
+(371, 1679010641, '127.0.0.1', '7IU5U'),
+(372, 1679010818, '127.0.0.1', 'ECKUr'),
+(373, 1679010971, '127.0.0.1', 'OvGnF'),
+(374, 1679010986, '127.0.0.1', 'RKbJQ'),
+(375, 1679011073, '127.0.0.1', 'IKnlM'),
+(376, 1679011352, '127.0.0.1', 'eo4d9'),
+(377, 1679011369, '127.0.0.1', 'dZVu1'),
+(378, 1679011746, '127.0.0.1', 'JiHt1'),
+(379, 1679011847, '127.0.0.1', 'QzwSa'),
+(380, 1679011923, '127.0.0.1', 'QLwvn'),
+(381, 1679012070, '127.0.0.1', '7lFjo'),
+(382, 1679012169, '127.0.0.1', 'sg822'),
+(383, 1679012179, '127.0.0.1', 'g2vN1'),
+(384, 1679012206, '127.0.0.1', '7AB0g'),
+(385, 1679012208, '127.0.0.1', 'nT7A5');
 
 -- --------------------------------------------------------
 
@@ -139,6 +188,13 @@ CREATE TABLE `categorias` (
   `visible` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `nombre`, `descripcion`, `tipo`, `id_parent`, `visible`) VALUES
+(47, 'ELECTRONICOS', '<p>\r\n	ELECTRONICOSELECTRONICOSELECTRONICOSELECTRONICOS</p>\r\n', 'Activo', NULL, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -150,6 +206,14 @@ CREATE TABLE `categoria_productos` (
   `id_categoria` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `categoria_productos`
+--
+
+INSERT INTO `categoria_productos` (`id_producto`, `id_categoria`) VALUES
+(178, 47),
+(179, 47);
+
 -- --------------------------------------------------------
 
 --
@@ -159,8 +223,8 @@ CREATE TABLE `categoria_productos` (
 CREATE TABLE `ci_sessions` (
   `id` varchar(128) NOT NULL,
   `ip_address` varchar(45) NOT NULL,
-  `timestamp` int(10) UNSIGNED DEFAULT 0,
-  `data` blob DEFAULT NULL
+  `timestamp` int(10) UNSIGNED DEFAULT '0',
+  `data` blob
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -253,7 +317,7 @@ CREATE TABLE `consignaciones` (
   `fecha_devolucion` date NOT NULL,
   `total` double NOT NULL,
   `estado` enum('Entregado','Finalizado') DEFAULT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp()
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -271,8 +335,8 @@ CREATE TABLE `cotizaciones` (
   `telefono` varchar(100) NOT NULL,
   `mensaje` text NOT NULL,
   `estado` tinyint(1) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp(),
-  `respuesta` text DEFAULT NULL,
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `respuesta` text,
   `fecha_respuesta` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -296,7 +360,7 @@ CREATE TABLE `cuenta_cliente` (
   `saldo` double NOT NULL,
   `estado` varchar(1) NOT NULL,
   `tipo` int(11) NOT NULL,
-  `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp(),
+  `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_cobrador` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -348,7 +412,7 @@ INSERT INTO `destacados` (`id`, `id_producto`, `nota`) VALUES
 CREATE TABLE `dispositivos` (
   `id` int(11) NOT NULL,
   `keyAPK` varchar(25) NOT NULL,
-  `fecha_registro` timestamp NOT NULL DEFAULT current_timestamp(),
+  `fecha_registro` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_usuario` int(11) NOT NULL,
   `estado` enum('Habilitado','Inactivo') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -370,7 +434,7 @@ CREATE TABLE `gastos` (
   `id` int(11) NOT NULL,
   `detalle` varchar(350) NOT NULL,
   `monto` double NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp(),
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_persona` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -414,6 +478,18 @@ CREATE TABLE `imagenes` (
   `descripcion` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `imagenes`
+--
+
+INSERT INTO `imagenes` (`id`, `imagen`, `id_producto`, `orden`, `descripcion`) VALUES
+(588, '6b1341.png', 178, NULL, NULL),
+(589, 'e00d33.jpg', 178, NULL, NULL),
+(590, '1597a9.jpg', 179, NULL, NULL),
+(591, 'a6b918.JPG', 179, NULL, NULL),
+(592, '2b617b.JPG', 179, NULL, NULL),
+(593, '8edd03.jpg', 179, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -427,6 +503,14 @@ CREATE TABLE `inventarios` (
   `estado` enum('Habilitado','Deshabilitado') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `inventarios`
+--
+
+INSERT INTO `inventarios` (`id_producto`, `id_sucursal`, `cantidad`, `estado`) VALUES
+(178, 9, 890, 'Habilitado'),
+(179, 9, 1800, 'Habilitado');
+
 -- --------------------------------------------------------
 
 --
@@ -439,7 +523,7 @@ CREATE TABLE `mensajes` (
   `id_remitente` int(11) NOT NULL,
   `id_destinatario` int(11) NOT NULL,
   `estado` enum('leido','pendiente') NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp()
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -453,7 +537,7 @@ CREATE TABLE `notificaciones` (
   `title` varchar(250) NOT NULL,
   `mensaje` varchar(500) NOT NULL,
   `tipo` enum('Informativo','Advertencia','Mensaje','Critico') NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp(),
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `estado` enum('Activo','Inactivo') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -537,7 +621,7 @@ CREATE TABLE `pedidos` (
   `total` double NOT NULL,
   `estado` enum('Pendiente','Entregado','Cancelado','Finalizado') NOT NULL,
   `descontar_stock` tinyint(4) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp()
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -579,12 +663,8 @@ CREATE TABLE `personas` (
 --
 
 INSERT INTO `personas` (`id`, `nombre`, `apellidos`, `fecha_nacimiento`, `sexo`, `direccion`, `telefono`, `email`, `facebook`, `ocupacion`, `fotografia`, `estado`, `id_sucursal`) VALUES
-(14, 'Octavio', 'Mariscal Caballero', '1994-08-05', 'Hombre', 'B/Roca y Coronado', '75656719', NULL, NULL, 'Sub Gerente Administrador del Sistema', '0ac70-5.png', 'Activo', 6),
-(15, 'Adan Noel', 'Mariscal Caballero', '1986-08-22', 'Hombre', 'B/Roca y Coronado', '78446615', NULL, NULL, 'Administrador General del Sistema', 'c2566-1.png', 'Activo', 6),
-(16, 'Dolly', 'Caballero Pinto', '1964-09-15', 'Mujer', 'B/Roca y Coronado', '74620131', NULL, NULL, '', NULL, 'Activo', 0),
-(17, 'Jose Manuel', 'Mariscal Caballero', '1991-10-24', 'Hombre', 'B/Roca y Coronado', '78031062', NULL, NULL, 'VENDEDOR', 'b2166-2.png', 'Activo', 0),
-(18, 'Tomas', 'Mariscal Maldonado', '1965-10-22', 'Hombre', 'B/Roca y Coronado', '76023357', NULL, NULL, 'VENDEDOR', NULL, 'Activo', 0),
-(19, 'Doris Rocio', 'Mariscal Caballero', '1993-07-18', 'Mujer', 'B/Roca y Coronado', NULL, NULL, NULL, 'VENDEDOR', NULL, 'Activo', 7);
+(19, 'personal', 'PRUEBA', '1993-07-18', 'Mujer', 'B/Roca y Coronado', NULL, NULL, NULL, 'VENDEDOR', '9855e-5.png', 'Activo', 0),
+(20, 'vendedor', 'vendedor', '2023-03-11', 'Hombre', 'vendedor 2', 'vendedor 2', 'vendedor 2@vendedor 2.COM', NULL, 'VENDEDOR', 'c4ed0-c123a-4.png', 'Activo', 9);
 
 -- --------------------------------------------------------
 
@@ -602,7 +682,7 @@ CREATE TABLE `plan_pagos` (
   `tipo_periodico` int(11) NOT NULL,
   `monto_cuotas` double NOT NULL,
   `fecha_inicio` date NOT NULL,
-  `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp(),
+  `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `estado` varchar(1) NOT NULL,
   `nota` varchar(350) NOT NULL,
   `id_plan_anterior` int(11) NOT NULL
@@ -636,7 +716,7 @@ CREATE TABLE `productos` (
   `titulo` varchar(150) NOT NULL,
   `subtitulo` varchar(150) DEFAULT NULL,
   `descripcion` text NOT NULL,
-  `especificaciones` text DEFAULT NULL,
+  `especificaciones` text,
   `precio_base` double NOT NULL,
   `medida` varchar(50) DEFAULT NULL,
   `unidad_mayor` enum('Unidad','Docena','Cuarta') NOT NULL DEFAULT 'Unidad',
@@ -645,6 +725,14 @@ CREATE TABLE `productos` (
   `activo` enum('Habilitado','Deshabilitado') NOT NULL DEFAULT 'Habilitado',
   `tipo` enum('Insumo','Producto','Mercaderia','') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id`, `codigo`, `nombre`, `titulo`, `subtitulo`, `descripcion`, `especificaciones`, `precio_base`, `medida`, `unidad_mayor`, `precio_mayor`, `stock_minimo`, `activo`, `tipo`) VALUES
+(178, 'PROD-01', 'PRODUCTO 1', 'PRODUCTO 1', 'PRODUCTO 1', '<p>\r\n	PRODUCTO 1 PRODUCTO 1PRODUCTO 1PRODUCTO 1PRODUCTO 1PRODUCTO 1PRODUCTO 1PRODUCTO 1</p>\r\n', NULL, 50, NULL, 'Docena', 500, 45, 'Habilitado', 'Producto'),
+(179, 'PROD02', 'PRODUCTO 2', 'PRODUCTO 2', 'PRODUCTO 2', '<p>\r\n	PRODUCTO 2PRODUCTO 2PRODUCTO 2</p>\r\n', '<p>\r\n	PRODUCTO 2PRODUCTO 2PRODUCTO 2</p>\r\n', 458, 'UNIDAD', 'Cuarta', 1200, 15, 'Habilitado', 'Mercaderia');
 
 -- --------------------------------------------------------
 
@@ -741,8 +829,16 @@ CREATE TABLE `reposiciones` (
   `tipo` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `nota` varchar(250) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp()
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `reposiciones`
+--
+
+INSERT INTO `reposiciones` (`id`, `id_producto`, `cantidad`, `id_sucursal_destino`, `id_sucursal_origen`, `tipo`, `id_usuario`, `nota`, `fecha`) VALUES
+(1, 178, 890, 9, 9, 1, 6, '', '2023-03-17 00:25:37'),
+(2, 179, 1800, 9, 9, 1, 6, '', '2023-03-17 00:25:42');
 
 -- --------------------------------------------------------
 
@@ -870,14 +966,6 @@ CREATE TABLE `slideshow` (
   `priority` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `slideshow`
---
-
-INSERT INTO `slideshow` (`id`, `title`, `url`, `priority`) VALUES
-(40, '', 'c2be6a.jpg', NULL),
-(45, '', '492b60.jpg', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -895,6 +983,13 @@ CREATE TABLE `sucursales` (
   `location` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `sucursales`
+--
+
+INSERT INTO `sucursales` (`id`, `nombre`, `direccion`, `telefono`, `email`, `nota`, `tipo`, `location`) VALUES
+(9, 'Sucursal 1', 'dir Sucursal 1', '11212121', 'sucursal@gmail.com', 'Sucursal 1', 1, '112121');
+
 -- --------------------------------------------------------
 
 --
@@ -905,7 +1000,7 @@ CREATE TABLE `transferencias_apk` (
   `id` int(11) NOT NULL,
   `id_venta` int(11) NOT NULL,
   `id_dispositivo` int(11) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp(),
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_venta_apk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -923,9 +1018,9 @@ CREATE TABLE `usuarios` (
   `id_grupo` int(11) NOT NULL,
   `id_persona` int(11) NOT NULL,
   `id_sucursal` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `estado` enum('Activo','Inactivo') NOT NULL,
-  `avatar` int(11) DEFAULT 0
+  `avatar` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -982,7 +1077,7 @@ CREATE TABLE `venta_productos` (
   `orden` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,
   `precio` double NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp(),
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `anotacion` varchar(250) NOT NULL,
   `fecha_inicio` date NOT NULL,
   `fecha_entrega` date NOT NULL,
@@ -1297,19 +1392,19 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT de la tabla `bitacora`
 --
 ALTER TABLE `bitacora`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `captcha`
 --
 ALTER TABLE `captcha`
-  MODIFY `captcha_id` bigint(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=357;
+  MODIFY `captcha_id` bigint(13) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=386;
 
 --
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
@@ -1363,7 +1458,7 @@ ALTER TABLE `grupos`
 -- AUTO_INCREMENT de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=583;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=594;
 
 --
 -- AUTO_INCREMENT de la tabla `mensajes`
@@ -1387,7 +1482,7 @@ ALTER TABLE `pagos`
 -- AUTO_INCREMENT de la tabla `personas`
 --
 ALTER TABLE `personas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `plan_pagos`
@@ -1405,7 +1500,7 @@ ALTER TABLE `precios`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=180;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
@@ -1417,7 +1512,7 @@ ALTER TABLE `proveedores`
 -- AUTO_INCREMENT de la tabla `reposiciones`
 --
 ALTER TABLE `reposiciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `revision_inventario`
@@ -1453,7 +1548,7 @@ ALTER TABLE `slideshow`
 -- AUTO_INCREMENT de la tabla `sucursales`
 --
 ALTER TABLE `sucursales`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
